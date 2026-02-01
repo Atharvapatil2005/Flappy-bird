@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flappy Bird</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    <div id="scoreBadge" class="score-badge hidden" aria-live="polite">0</div>
+    <div id="startScreen" class="overlay overlay--start">
+      <div class="overlay__card">
+        <h1 class="overlay__title">Flappy Bird</h1>
+        <p class="overlay__text">Press <kbd>Space</kbd> or click to start</p>
+      </div>
+    </div>
+    <div id="gameOverScreen" class="overlay overlay--gameover hidden">
+      <div class="overlay__card">
+        <h2 class="overlay__subtitle">Game Over</h2>
+        <p class="overlay__text">Score: <span id="finalScore">0</span></p>
+        <p class="overlay__cta">Press <kbd>Space</kbd> or click to restart</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
