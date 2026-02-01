@@ -174,6 +174,7 @@ function endGame() {
   gameState = "gameover";
   soundGameOver();
   finalScoreEl.textContent = score;
+  if (scoreBadgeEl) scoreBadgeEl.classList.add("hidden");
   gameOverScreen.classList.remove("hidden");
 }
 
@@ -227,13 +228,8 @@ function drawPipes() {
 }
 
 function drawScore() {
+  // Score is shown via the HTML score badge during gameplay
   if (gameState !== "playing") return;
-  ctx.fillStyle = "#fff";
-  ctx.font = "bold 28px system-ui, sans-serif";
-  ctx.strokeStyle = "#000";
-  ctx.lineWidth = 2;
-  ctx.strokeText(score, CANVAS_WIDTH / 2 - 12, 45);
-  ctx.fillText(score, CANVAS_WIDTH / 2 - 12, 45);
 }
 
 // ============ Game Loop ============
@@ -263,6 +259,10 @@ function startGame() {
   bird = createBird();
   pipes = [];
   lastPipeTime = Date.now();
+  if (scoreBadgeEl) {
+    scoreBadgeEl.textContent = "0";
+    scoreBadgeEl.classList.remove("hidden");
+  }
   startScreen.classList.add("hidden");
   gameOverScreen.classList.add("hidden");
   if (animationId) cancelAnimationFrame(animationId);
