@@ -68,22 +68,3 @@ flappy-bird/
 └── README.md     # This file
 ```
 
-## What I Learned
-
-- **Canvas rendering** — Drawing shapes, gradients, and text in a 2D context with a game loop
-- **Game loops** — Using `requestAnimationFrame` for smooth, frame-based updates
-- **Collision detection** — Circle–rectangle overlap for game physics
-- **Basic game physics** — Gravity, velocity, and position updates over time
-- **Audio synthesis** — Using the Web Audio API (oscillators, gain) to generate simple sound effects without audio files
-
-## Future Improvements
-
-- **Mobile touch optimization** — Larger tap targets and touch-friendly controls
-- **High-score persistence** — Store best score in `localStorage` and show it on the game over screen
-- **Difficulty levels** — Easy / Normal / Hard presets (e.g., different gravity, gap size, pipe speed)
-- **Better animations** — Bird flap cycle, pipe entrance/exit, subtle parallax or clouds
-- **Sprite-based graphics** — Replace circles and rectangles with sprite sheets for a more polished look
-
----
-
-*Built with vanilla HTML, CSS, and JavaScript—suitable for portfolios, internships, and academic submissions.*
